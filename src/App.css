@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  background-image: url("assets/pattern-circles.svg"),
+    url("assets/bg-pattern.svg");
+  background-position: top center, top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 150px, 100% 70%;
+  background-color: whitesmoke;
+  font-family: "Manrope", sans-serif;
+  color: hsl(227, 35%, 25%);
+  letter-spacing: 1px;
+  margin: 0;
   min-height: 100vh;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container h1 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.container p {
+  font-size: 13px;
+  color: hsl(225, 20%, 60%);
+  font-weight: 500;
+}
+
+.main {
+  background-color: white;
+  margin-top: 100px;
+  width: 40%;
+  padding: 40px;
+  border-radius: 10px;
+  color: hsl(225, 20%, 60%);
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px 0 rgba(167, 165, 165, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.part1 {
+  padding-top: 13px;
+  padding-right: 60px;
+}
+
+.part2 {
+  display: flex;
+  flex-direction: row;
+  padding-left: 60px;
+}
+
+.btm {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.three {
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 20px;
+  font-size: 10px;
+  padding: 2px 5px;
+  margin-left: 10px;
+}
+
+.div1 {
+  font-size: 32px;
+  color: hsl(227, 35%, 25%);
+  font-weight: 700;
+}
+
+.div2 {
+  padding: 17px 8px;
+}
+
+.bottom {
+  background-color: white;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  margin: 2px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 rgba(167, 165, 165, 0.5);
+}
+
+.cont {
+  display: flex;
+  flex-direction: row;
+}
+.cont p {
+  padding: 5px;
+  font-size: 10px;
+}
+
+.cont img {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.btm_btn button {
+  border-radius: 30px;
+  padding: 10px 40px;
+  background-color: hsl(227, 35%, 25%);
+  font-size: 12px;
   color: white;
+  outline: none;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px 0 rgba(31, 30, 30, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.btm_btn button:hover {
+  background-color: hsla(227, 35%, 25%, 0.822);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.one,
+.two {
+  padding-left: 10px;
+}
+
+/* //slider */
+
+.slider {
+  width: 100%;
+}
+
+.range_slider {
+  -webkit-appearance: none !important;
+  width: 100%;
+  height: 7px;
+  outline: none;
+  /* background: linear-gradient(
+    90deg,
+    hsl(174, 77%, 80%) 50%,
+    hsl(224, 65%, 95%) 50%
+  ); */
+  margin: 30px 0 50px 0;
+}
+
+.range_slider::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  width: 30px;
+  height: 30px;
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  background-image: url("assets/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 12px 12px 30px 0px rgb(120, 245, 232);
+  -webkit-box-shadow: 12px 12px 30px 0px rgb(120, 245, 232);
+}
+
+.range_slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 78%, 65%);
+  box-shadow: 12px 12px 30px 0px rgb(204, 204, 204);
+  -webkit-box-shadow: 12px 12px 30px 0px rgb(204, 204, 204);
+}
+
+.range_slider::-webkit-slider-thumb:active {
+  background-color: hsl(174, 78%, 65%);
+  box-shadow: 12px 12px 30px 0px rgb(120, 245, 232);
+  -webkit-box-shadow: 12px 12px 30px 0px rgb(120, 245, 232);
+}
+
+/* //toggle btn */
+
+.toggle_btn {
+  padding: 2px;
+  height: 20px;
+  width: 40px;
+  background-color: hsl(223, 50%, 87%);
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.inner_circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.toggle_btn.active {
+  background-color: hsl(174, 77%, 80%);
+}
+
+.toggle_btn.active > .inner_circle {
+  margin-left: 20px;
+}
+.a {
+  display: none;
+}
+
+.btn {
+  position: absolute;
+  top: 35px;
+  left: 90%;
+  padding: 2px;
+  height: 20px;
+  width: 40px;
+  background-color: hsl(223, 50%, 87%);
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.btn.active > .inner_circle {
+  margin-left: 20px;
+}
+
+.btn.active {
+  background-color: gray;
+}
+
+.themeSwatch {
+  position: absolute;
+  top: 15px;
+  left: 91%;
+}
+
+@media (max-width: 1072px) {
+  .main,
+  .bottom {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 856px) {
+  .main,
+  .bottom {
+    width: 60%;
+  }
+  .themeSwatch {
+    left: 92%;
+  }
+}
+
+@media (max-width: 799px) {
+  /* */
+  .btn {
+    position: absolute;
+    top: 146px;
+    left: 45%;
+  }
+  .themeSwatch {
+    top: 125px;
+    left: 46.5%;
+    /* transform: rotate(90deg); */
+  }
+}
+
+@media (max-width: 717px) {
+  .contain,
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .part1,
+  .part2 {
+    padding: 5px 0;
+  }
+  /* .part2 {
+    padding: 0 0 30px 0;
+  } */
+  .three span {
+    display: none;
+  }
+  .main {
+    margin-top: 70px;
+  }
+  .a {
+    display: flex;
+  }
+  .b {
+    display: none;
+  }
+  .range_slider {
+    margin: 20px 0 40px 0;
+  }
+
+  .btn {
+    top: 130px;
+  }
+  .themeSwatch {
+    top: 110px;
+  }
+}
+
+@media (max-width: 635px) {
+  .main {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 570px) {
+  .main,
+  .bottom {
+    width: 70%;
+  }
+}
+
+@media (max-width: 492px) {
+  .main,
+  .bottom {
+    width: 80%;
+  }
+}
+
+@media (max-width: 431px) {
+  .slider {
+    width: 90%;
+  }
+  .main,
+  .bottom {
+    width: 90%;
+  }
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .container h1,
+  .container p {
+    margin: 0 30px;
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 20px;
+  }
+  .container p {
+    font-size: 12px;
+    margin: 0 60px;
+  }
+  .cont p {
+    margin: 0px;
+  }
+  .themeSwatch {
+    left: 33.5%;
   }
 }
